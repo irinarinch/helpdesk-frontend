@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HelpDesk</title>
+</head>
+<body>
+	<div id="root" class="root">
+    <div class="add-ticket-container">
+      <button class="add-ticket-btn">Добавить тикет</button>
+    </div>
+  </div> 
+  <div class="modal hidden">                   
+    <form class="form" novalidate>
+      <div class="form-title"></div>      
+      <div>Краткое описание</div>                          
+      <input type="text" class="form-name-input" required>
+      <div>Подробное описание</div>         
+      <input type="text" class="form-description-input" required>
+      <div class="form-buttons">  
+        <button type="button" class="cancel-btn">Отмена</button> 
+        <button type="submit" class="save-btn">Ok</button> 
+      </div>
+    </form>  
+  </div>
+  <div class="modal-to-remove hidden">
+    <div class="form-title">Удалить тикет</div>
+    <div>Вы уверены, что хотите удалить тикет? Это действие необратимо</div>        
+    <div class="form-buttons">  
+      <button type="button" class="cancel-btn">Отмена</button> 
+      <button type="submit" class="delete-ticket-btn">Ok</button> 
+    </div>
+  </div> 
+</body>
+</html>
