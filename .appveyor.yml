@@ -1,4 +1,4 @@
-image: Ubuntu  # образ для сборки LTS
+image: Ubuntu1804 # образ для сборки LTS
 
 stack: node 18  # окружение актуальное
 
