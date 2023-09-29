@@ -8,6 +8,7 @@ export default class TicketService {
   constructor() {
     this.host = 'https://helpdesk-backend-ieyc.onrender.com';
   }
+
   list(callback) {
     this.request = createRequest({
       method: 'GET',
