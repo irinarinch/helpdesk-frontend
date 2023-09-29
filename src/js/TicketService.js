@@ -5,10 +5,13 @@ import createRequest from './createRequest';
  *  Содержит методы для отправки запросов на сервер и получения ответов
  * */
 export default class TicketService {
+  constructor() {
+    this.host = 'https://helpdesk-backend-ieyc.onrender.com';
+  }
   list(callback) {
     this.request = createRequest({
       method: 'GET',
-      url: 'http://localhost:7070/?method=allTickets',
+      url: `${this.host}/?method=allTickets`,
       data: null,
       callback,
     });
@@ -17,7 +20,7 @@ export default class TicketService {
   get(id, callback) {
     this.request = createRequest({
       method: 'GET',
-      url: `http://localhost:7070/?method=ticketById&id=${id}`,
+      url: `${this.host}?method=ticketById&id=${id}`,
       data: null,
       callback,
     });
@@ -26,7 +29,7 @@ export default class TicketService {
   create(data, callback) {
     this.request = createRequest({
       method: 'POST',
-      url: 'http://localhost:7070/?method=createTicket',
+      url: `${this.host}/?method=createTicket`,
       data,
       callback,
     });
@@ -35,7 +38,7 @@ export default class TicketService {
   update(id, data, callback) {
     this.request = createRequest({
       method: 'POST',
-      url: `http://localhost:7070/?method=updateById&id=${id}`,
+      url: `${this.host}/?method=updateById&id=${id}`,
       data,
       callback,
     });
@@ -44,7 +47,7 @@ export default class TicketService {
   delete(id, callback) {
     this.request = createRequest({
       method: 'GET',
-      url: `http://localhost:7070/?method=deleteById&id=${id}`,
+      url: `${this.host}/?method=deleteById&id=${id}`,
       data: null,
       callback,
     });
