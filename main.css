@@ -1,0 +1,150 @@
+body {
+  color: black;
+}
+
+.checkbox-other {
+	display: block;
+	line-height: 22px;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+  padding: 10px;
+}
+
+.checkbox-other input[type=checkbox] {
+	position: absolute;	
+	opacity: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+  cursor: pointer;
+}
+
+.checkbox-other div {
+	display: inline-block;
+	position: relative; 
+	padding: 0 0 0 35px; 
+	line-height: 22px; 
+  pointer-events: none;	   
+}
+
+.checkbox-other div:before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 1px solid #171717;
+  border-radius: 50%; 
+  pointer-events: none;	    
+} 
+
+.checkbox-other input[type=checkbox]:checked + div:after {
+	content: "✓";  
+	color: black;
+	font-size: 15px;
+	font-weight: 900;
+	position: absolute;
+	left: 5px;
+	top: 0px;
+	opacity: 1;
+}
+
+.ticket {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  border-bottom: none;
+  padding-right: 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.ticket:last-child {
+  border-bottom: 1px solid black;
+}
+
+.control {
+	content: "";	
+	width: 20px;
+	height: 20px;	
+	border: 1px solid #171717;
+  border-radius: 50%;
+  margin: 10px 5px;
+}
+
+label {
+  flex-grow: 1;   
+}
+
+img {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.created {
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.add-ticket-btn, button {
+  background-color: white;
+  border: 1px solid #171717;  
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;  
+  font-size: 16px;
+  font-family: inherit;  
+  margin: 0px 0px 5px 10px;
+  cursor: pointer;
+  border-radius: 12px;  
+}
+
+.add-ticket-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.description {
+  display: block;
+  padding: 5px 45px 10px;
+  width: 100%;  
+}
+
+.modal, .modal-to-remove {  
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 12px;
+  width: 55%;  
+  position: fixed;
+  left: 25%;
+  top: 8%;
+  background: #fff; 
+}
+
+.hidden {
+  display: none;
+}
+
+.form-title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 97%;
+  padding: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
